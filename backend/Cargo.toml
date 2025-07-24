@@ -1,0 +1,52 @@
+[package]
+name = "solana-volume-bot"
+version = "2.0.0"
+edition = "2021"
+authors = ["NikoDev <niko@example.com>"]
+description = "Professional volume generation software for Solana tokens"
+
+[dependencies]
+# Web framework
+axum = "0.7"
+tokio = { version = "1.0", features = ["full"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "fs"] }
+hyper = "1.0"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Database
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "chrono", "uuid"] }
+
+# Solana
+solana-client = "1.17"
+solana-sdk = "1.17"
+solana-account-decoder = "1.17"
+anchor-client = "0.29"
+
+# Crypto
+ed25519-dalek = "2.0"
+bs58 = "0.5"
+
+# Utils
+uuid = { version = "1.0", features = ["v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
+thiserror = "1.0"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+config = "0.14"
+dotenv = "0.15"
+rand = "0.8"
+
+# Async
+futures = "0.3"
+async-trait = "0.1"
+
+# HTTP client
+reqwest = { version = "0.11", features = ["json"] }
+
+[dev-dependencies]
+tokio-test = "0.4"
