@@ -1,5 +1,0 @@
-solana~=0.35.1
-solders~=0.21.0
-python-dotenv~=1.0.1
-construct~=2.10.68
-aiohttp~=3.11.10

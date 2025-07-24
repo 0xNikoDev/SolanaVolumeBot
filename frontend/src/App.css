@@ -1,0 +1,1510 @@
+/* App Container */
+.appContainer {
+    min-height: 100vh;
+    color: white;
+    padding: 1rem;
+    min-width: 1200px;
+}
+
+/* Token Address Bar */
+.tokenAddressBar {
+    margin-bottom: 1rem;
+    backdrop-filter: blur(12px);
+    background: linear-gradient(to right, rgba(31, 41, 55, 0.5), rgba(55, 65, 81, 0.5));
+    border: 1px solid rgba(75, 85, 99, 0.3);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+/* Token Bar Updates */
+.tokenAddressContent {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.tokenBarActions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.createButton {
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(to right, rgb(22, 163, 74), rgb(21, 128, 61));
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.25);
+}
+
+.createButton:hover {
+    background: linear-gradient(to right, rgb(34, 197, 94), rgb(22, 163, 74));
+}
+
+/* Create Token Modal */
+.createTokenModal {
+    max-width: 800px;
+    max-height: 95vh;
+    overflow-y: auto;
+}
+
+.createTokenBody {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.formGrid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.formSection {
+    background: rgba(17, 24, 39, 0.3);
+    border: 1px solid rgba(75, 85, 99, 0.3);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.formSectionTitle {
+    background: linear-gradient(to right, rgb(96, 165, 250), rgb(167, 139, 250));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+}
+
+.textareaInput {
+    width: 100%;
+    background: rgba(31, 41, 55, 0.5);
+    border: 1px solid rgb(75, 85, 99);
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: white;
+    transition: all 0.2s;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.textareaInput:focus {
+    border-color: rgb(96, 165, 250);
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+    outline: none;
+}
+
+.textareaInput::placeholder {
+    color: rgb(156, 163, 175);
+}
+
+.inputError {
+    border-color: rgb(239, 68, 68) !important;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2) !important;
+}
+
+.errorText {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.75rem;
+    color: rgb(248, 113, 113);
+}
+
+.checkboxGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: rgb(96, 165, 250);
+    cursor: pointer;
+}
+
+.checkboxLabel {
+    font-size: 0.875rem;
+    color: rgb(209, 213, 219);
+    cursor: pointer;
+    user-select: none;
+}
+
+.buttonCreateToken {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(to right, rgb(22, 163, 74), rgb(21, 128, 61));
+    box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.25);
+}
+
+.buttonCreateToken:hover:not(:disabled) {
+    background: linear-gradient(to right, rgb(34, 197, 94), rgb(22, 163, 74));
+}
+
+.buttonCreateToken:disabled {
+    background: rgb(75, 85, 99) !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+    opacity: 0.6;
+}
+
+/* List Headers */
+.listHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.loadingIndicator {
+    font-size: 0.75rem;
+    color: rgb(96, 165, 250);
+    font-weight: 500;
+}
+
+.errorIndicator {
+    font-size: 0.75rem;
+    color: rgb(248, 113, 113);
+    font-weight: 500;
+}
+
+.listHeaders {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    background: rgba(17, 24, 39, 0.4);
+    border-radius: 0.375rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgb(209, 213, 219);
+    border: 1px solid rgba(75, 85, 99, 0.3);
+}
+
+.listHeaderItem {
+    white-space: nowrap;
+}
+
+.headerWallet {
+    width: 5rem;
+}
+
+.headerType {
+    width: 4rem;
+}
+
+.headerSol,
+.headerCost {
+    width: 4rem;
+    text-align: right;
+}
+
+.headerTokens {
+    width: 4rem;
+    text-align: right;
+}
+
+.headerPrice,
+.headerAvgCost {
+    width: 5rem;
+    text-align: right;
+}
+
+.headerTime {
+    width: 4rem;
+}
+
+.headerTx {
+    width: 5rem;
+}
+
+.headerProfit {
+    width: 5rem;
+    text-align: right;
+}
+
+.headerSell {
+    width: 4rem;
+    text-align: right;
+}
+
+/* Our Wallet Highlighting */
+.listItemOur {
+    border-left: 3px solid rgb(96, 165, 250);
+    background: linear-gradient(to right, rgba(96, 165, 250, 0.1), rgba(96, 165, 250, 0.05));
+}
+
+.listItemExternal {
+    border-left: 3px solid transparent;
+}
+
+.ourWalletBadge {
+    display: inline-block;
+    background: linear-gradient(to right, rgb(96, 165, 250), rgb(59, 130, 246));
+    color: white;
+    font-size: 0.6rem;
+    font-weight: bold;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    margin-left: 0.25rem;
+    text-transform: uppercase;
+}
+
+/* Enhanced Transaction Styles */
+.transactionWallet,
+.holderWallet {
+    color: rgb(147, 197, 253);
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.transactionTokens,
+.holderTokens {
+    width: 4rem;
+    text-align: right;
+    color: rgb(209, 213, 219);
+}
+
+/* Empty States */
+.emptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: rgb(156, 163, 175);
+    text-align: center;
+}
+
+.emptyStateIcon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+}
+
+.emptyStateText {
+    font-size: 0.875rem;
+}
+
+.tokenAddressInput {
+    flex: 1;
+    background: rgba(31, 41, 55, 0.5);
+    border: 1px solid rgb(75, 85, 99);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    transition: all 0.2s;
+}
+
+.tokenAddressInput:focus {
+    border-color: rgb(96, 165, 250);
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+    outline: none;
+}
+
+.tokenAddressInput::placeholder {
+    color: rgb(156, 163, 175);
+}
+
+.updateButton {
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(to right, rgb(37, 99, 235), rgb(29, 78, 216));
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.25);
+}
+
+.updateButton:hover {
+    background: linear-gradient(to right, rgb(59, 130, 246), rgb(37, 99, 235));
+}
+
+/* Main Grid Layout */
+.mainGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    height: calc(100vh - 120px);
+}
+
+.gridColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.leftColumn {
+    grid-column: span 4;
+}
+
+.centerColumn {
+    grid-column: span 5;
+    gap: 1rem;
+}
+
+.rightColumn {
+    grid-column: span 3;
+    gap: 1rem;
+}
+
+/* Panel Base Style */
+.panel {
+    backdrop-filter: blur(12px);
+    background: linear-gradient(to bottom right, rgba(31, 41, 55, 0.5), rgba(55, 65, 81, 0.3));
+    border: 1px solid rgba(75, 85, 99, 0.3);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    overflow: auto;
+}
+
+/* Section Titles */
+.sectionTitle {
+    background: linear-gradient(to right, rgb(96, 165, 250), rgb(167, 139, 250));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.sectionTitleWallets {
+    background: linear-gradient(to right, rgb(96, 165, 250), rgb(167, 139, 250));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.sectionTitleToken {
+    background: linear-gradient(to right, rgb(96, 165, 250), rgb(167, 139, 250));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.sectionTitleTrading {
+    background: linear-gradient(to right, rgb(250, 204, 21), rgb(251, 146, 60));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.sectionTitleTransactions {
+    background: linear-gradient(to right, rgb(74, 222, 128), rgb(96, 165, 250));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.sectionTitleHolders {
+    background: linear-gradient(to right, rgb(167, 139, 250), rgb(236, 72, 153));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Trading Amounts and Actions Combined */
+.tradingAmountsAndActions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: rgba(17, 24, 39, 0.3);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(75, 85, 99, 0.3);
+    flex-wrap: wrap;
+    align-items: end;
+}
+
+/* Wallet Top Actions */
+.walletTopActions {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+/* Modal Styles */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modalContent {
+    background: linear-gradient(to bottom right, rgba(31, 41, 55, 0.95), rgba(55, 65, 81, 0.95));
+    border: 1px solid rgba(75, 85, 99, 0.5);
+    border-radius: 0.75rem;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(75, 85, 99, 0.3);
+}
+
+.modalTitle {
+    background: linear-gradient(to right, rgb(96, 165, 250), rgb(167, 139, 250));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.modalCloseButton {
+    background: none;
+    border: none;
+    color: rgb(156, 163, 175);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalCloseButton:hover:not(:disabled) {
+    background: rgba(75, 85, 99, 0.3);
+    color: white;
+}
+
+.modalCloseButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.modalBody {
+    padding: 1.5rem;
+}
+
+.privateKeysTextarea {
+    width: 100%;
+    min-height: 200px;
+    background: rgba(17, 24, 39, 0.5);
+    border: 1px solid rgb(75, 85, 99);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    resize: vertical;
+    transition: all 0.2s;
+}
+
+.privateKeysTextarea:focus {
+    border-color: rgb(96, 165, 250);
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+    outline: none;
+}
+
+.privateKeysTextarea::placeholder {
+    color: rgb(156, 163, 175);
+}
+
+.privateKeysTextarea:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.modalInfo {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(37, 99, 235, 0.1);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    border-radius: 0.5rem;
+}
+
+.infoText {
+    margin: 0.25rem 0;
+    font-size: 0.875rem;
+    color: rgb(209, 213, 219);
+}
+
+.modalFooter {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    border-top: 1px solid rgba(75, 85, 99, 0.3);
+    background: rgba(17, 24, 39, 0.3);
+}
+
+.buttonCancel {
+    padding: 0.75rem 1.5rem;
+    background: rgba(55, 65, 81, 0.8);
+    color: white;
+    border: 1px solid rgba(75, 85, 99, 0.5);
+}
+
+.buttonCancel:hover:not(:disabled) {
+    background: rgba(75, 85, 99, 0.8);
+}
+
+.buttonAddWallets {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(to right, rgb(22, 163, 74), rgb(21, 128, 61));
+    box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.25);
+}
+
+.buttonAddWallets:hover:not(:disabled) {
+    background: linear-gradient(to right, rgb(34, 197, 94), rgb(22, 163, 74));
+}
+
+.buttonAddWallets:disabled,
+.buttonCancel:disabled {
+    background: rgb(75, 85, 99) !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+    opacity: 0.6;
+}
+
+/* Enhanced Wallet List Container */
+.walletListContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow-y: auto;
+    max-height: 400px;
+    padding-right: 0.5rem;
+}
+
+.amountGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.amountLabel {
+    font-size: 0.75rem;
+    color: rgb(209, 213, 219);
+    font-weight: 500;
+}
+
+.amountInput {
+    width: 80px;
+    background: rgba(31, 41, 55, 0.5);
+    border: 1px solid rgb(75, 85, 99);
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.5rem;
+    font-size: 0.75rem;
+    color: white;
+    transition: all 0.2s;
+}
+
+.amountInput:focus {
+    border-color: rgb(96, 165, 250);
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+    outline: none;
+}
+
+.amountInput::placeholder {
+    color: rgb(156, 163, 175);
+}
+
+/* Wallet Legend */
+.walletLegend {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: rgba(17, 24, 39, 0.2);
+    border-radius: 0.375rem;
+    border: 1px solid rgba(75, 85, 99, 0.2);
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.75rem;
+    color: rgb(209, 213, 219);
+}
+
+.legendColor {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legendColorTrading {
+    background: rgb(74, 222, 128);
+}
+
+.legendColorCreation {
+    background: rgb(96, 165, 250);
+}
+
+.legendColorBundle {
+    background: rgb(167, 139, 250);
+}
+
+/* Wallet Headers */
+.walletHeaders {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    background: rgba(17, 24, 39, 0.4);
+    border-radius: 0.375rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgb(209, 213, 219);
+    border: 1px solid rgba(75, 85, 99, 0.3);
+}
+
+.headerItem {
+    white-space: nowrap;
+}
+
+.headerDrag {
+    width: 1.5rem;
+    text-align: center;
+}
+
+.headerType {
+    width: 5rem;
+}
+
+.headerAddress {
+    width: 8rem;
+}
+
+.headerSol,
+.headerToken,
+.headerPrice {
+    width: 4rem;
+    text-align: right;
+}
+
+.headerState {
+    width: 4rem;
+}
+
+/* Wallet Actions */
+.walletHeader {
+    margin-bottom: 1rem;
+}
+
+.walletActions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.actionGroup {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    background: rgba(17, 24, 39, 0.3);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(75, 85, 99, 0.3);
+}
+
+.bundleOption {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    margin-right: 0.5rem;
+}
+
+.bundleCheckbox {
+    width: 16px;
+    height: 16px;
+    accent-color: rgb(96, 165, 250);
+    cursor: pointer;
+}
+
+.bundleLabel {
+    font-size: 0.875rem;
+    color: rgb(209, 213, 219);
+    cursor: pointer;
+    user-select: none;
+}
+
+.buttonBuySelected {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, rgb(22, 163, 74), rgb(21, 128, 61));
+    font-size: 0.875rem;
+    box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.25);
+}
+
+.buttonBuySelected:hover:not(:disabled) {
+    background: linear-gradient(to right, rgb(34, 197, 94), rgb(22, 163, 74));
+}
+
+.buttonBuySelected:disabled {
+    background: rgb(75, 85, 99) !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+}
+
+.buttonSellSelected {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, rgb(220, 38, 38), rgb(185, 28, 28));
+    font-size: 0.875rem;
+    box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.25);
+}
+
+.buttonSellSelected:hover:not(:disabled) {
+    background: linear-gradient(to right, rgb(239, 68, 68), rgb(220, 38, 38));
+}
+
+.buttonSellSelected:disabled {
+    background: rgb(75, 85, 99) !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+}
+
+.button {
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s;
+}
+
+.buttonAddWallet {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, rgb(22, 163, 74), rgb(21, 128, 61));
+    font-size: 0.875rem;
+    box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.25);
+}
+
+.buttonAddWallet:hover {
+    background: linear-gradient(to right, rgb(34, 197, 94), rgb(22, 163, 74));
+}
+
+.buttonRemoveWallet {
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to right, rgb(220, 38, 38), rgb(185, 28, 28));
+    font-size: 0.875rem;
+    box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.25);
+}
+
+.buttonRemoveWallet:hover {
+    background: linear-gradient(to right, rgb(239, 68, 68), rgb(220, 38, 38));
+}
+
+.buttonRemoveWallet:disabled {
+    background: rgb(75, 85, 99) !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+}
+
+/* Wallet List */
+.walletListContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow-x: auto;
+}
+
+.walletItem {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: max-content;
+}
+
+.walletItem:hover {
+    background: rgba(55, 65, 81, 0.3);
+}
+
+.walletItemSelected {
+    box-shadow: 0 0 0 3px rgb(96, 165, 250), 0 10px 20px -3px rgba(96, 165, 250, 0.4);
+    background: rgba(96, 165, 250, 0.1) !important;
+    transform: translateY(-1px);
+}
+
+.walletTypeTrading {
+    border-left-color: rgb(74, 222, 128);
+    background: linear-gradient(to right, rgba(6, 78, 59, 0.2), rgba(22, 101, 52, 0.1));
+}
+
+.walletTypeCreation {
+    border-left-color: rgb(96, 165, 250);
+    background: linear-gradient(to right, rgba(29, 78, 216, 0.2), rgba(37, 99, 235, 0.1));
+}
+
+.walletTypeBundle {
+    border-left-color: rgb(167, 139, 250);
+    background: linear-gradient(to right, rgba(88, 28, 135, 0.2), rgba(107, 33, 168, 0.1));
+}
+
+.walletContent {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.walletDragHandle {
+    width: 1.5rem;
+    text-align: center;
+    cursor: grab;
+    color: rgb(156, 163, 175);
+    font-weight: bold;
+    user-select: none;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    transition: all 0.2s;
+}
+
+.walletDragHandle:hover {
+    background: rgba(75, 85, 99, 0.3);
+    color: rgb(209, 213, 219);
+}
+
+.walletDragHandle:active {
+    cursor: grabbing;
+}
+
+.walletTypeSelect {
+    width: 5rem;
+    background: rgba(31, 41, 55, 0.7);
+    border: 1px solid rgba(75, 85, 99, 0.5);
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.375rem;
+    font-size: 0.65rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.walletTypeSelect:hover:not(:disabled) {
+    border-color: rgba(96, 165, 250, 0.5);
+}
+
+.walletTypeSelect:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.walletTypeSelect.walletTypeTrading {
+    border-color: rgba(74, 222, 128, 0.3);
+}
+
+.walletTypeSelect.walletTypeCreation {
+    border-color: rgba(96, 165, 250, 0.3);
+}
+
+.walletTypeSelect.walletTypeBundle {
+    border-color: rgba(167, 139, 250, 0.3);
+}
+
+.walletId {
+    font-weight: bold;
+    color: rgb(96, 165, 250);
+    width: 2rem;
+}
+
+.walletAddress {
+    color: rgb(147, 197, 253);
+    width: 8rem;
+}
+
+.walletSol,
+.walletToken,
+.walletPrice {
+    width: 4rem;
+    text-align: right;
+}
+
+.walletState {
+    font-size: 0.75rem;
+    font-weight: 500;
+    width: 4rem;
+}
+
+.stateIdle {
+    color: rgb(156, 163, 175);
+}
+
+.stateBuying {
+    color: rgb(74, 222, 128);
+}
+
+.stateSelling {
+    color: rgb(248, 113, 113);
+}
+
+.stateError {
+    color: rgb(239, 68, 68);
+}
+
+/* Chart Component */
+.chartContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chartHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.sectionTitleChart {
+    background: linear-gradient(to right, rgb(96, 165, 250), rgb(167, 139, 250));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 0;
+}
+
+.timeframeButtons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.timeframeButton {
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.timeframeButtonActive {
+    background: linear-gradient(to right, rgb(37, 99, 235), rgb(29, 78, 216));
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.25);
+}
+
+.timeframeButtonInactive {
+    background: rgba(55, 65, 81, 0.5);
+    border: 1px solid rgba(75, 85, 99, 0.3);
+}
+
+.timeframeButtonInactive:hover {
+    background: rgba(75, 85, 99, 0.5);
+    border-color: rgba(96, 165, 250, 0.3);
+}
+
+.chartContent {
+    flex: 1;
+    position: relative;
+    min-height: 400px;
+}
+
+.chartIframe {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border-radius: 0.5rem;
+    background: rgba(17, 24, 39, 0.5);
+}
+
+.chartPlaceholder {
+    height: 100%;
+    min-height: 400px;
+    background: rgba(17, 24, 39, 0.5);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed rgba(75, 85, 99, 0.3);
+}
+
+.placeholderContent {
+    text-align: center;
+    color: rgb(156, 163, 175);
+}
+
+.placeholderIcon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.placeholderText {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: rgb(209, 213, 219);
+}
+
+.placeholderSubtext {
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+/* Token Info Container */
+.tokenInfoContainer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.tokenInfo {
+    flex: 1;
+}
+
+.buttonSellAll {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(to right, rgb(220, 38, 38), rgb(185, 28, 28));
+    font-weight: 500;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.25);
+}
+
+.buttonSellAll:hover {
+    background: linear-gradient(to right, rgb(239, 68, 68), rgb(220, 38, 38));
+}
+
+.buttonDisabled {
+    background: rgb(75, 85, 99) !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+}
+
+.buttonDisabled:hover {
+    background: rgb(75, 85, 99) !important;
+}
+
+/* Trading Panel */
+.tradingPanel {
+    text-align: center;
+}
+
+.tradingModeButtons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.tradingModeButton {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tradingModeBuyActive {
+    background: linear-gradient(to right, rgb(22, 163, 74), rgb(21, 128, 61));
+    box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.25);
+}
+
+.tradingModeSellActive {
+    background: linear-gradient(to right, rgb(220, 38, 38), rgb(185, 28, 28));
+    box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.25);
+}
+
+.tradingModeInactive {
+    background: rgba(55, 65, 81, 0.5);
+}
+
+.tradingModeInactive:hover {
+    background: rgba(75, 85, 99, 0.5);
+}
+
+.tradingSettingsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: end;
+}
+
+.inputGroup {
+    text-align: left;
+}
+
+.inputLabel {
+    display: block;
+    font-size: 0.875rem;
+    color: rgb(209, 213, 219);
+    margin-bottom: 0.5rem;
+}
+
+.inputRow {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.input {
+    width: 100%;
+    background: rgba(31, 41, 55, 0.5);
+    border: 1px solid rgb(75, 85, 99);
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: white;
+    transition: all 0.2s;
+}
+
+.input:focus {
+    border-color: rgb(96, 165, 250);
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.2);
+    outline: none;
+}
+
+.input::placeholder {
+    color: rgb(156, 163, 175);
+}
+
+.inputSeparator {
+    color: rgb(156, 163, 175);
+}
+
+.tradingControls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.tradingToggleButton {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tradingToggleButtonStop {
+    background: linear-gradient(to right, rgb(220, 38, 38), rgb(185, 28, 28));
+    box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.25);
+}
+
+.tradingToggleButtonStop:hover {
+    background: linear-gradient(to right, rgb(239, 68, 68), rgb(220, 38, 38));
+}
+
+.tradingToggleButtonBuy {
+    background: linear-gradient(to right, rgb(22, 163, 74), rgb(21, 128, 61));
+    box-shadow: 0 10px 15px -3px rgba(34, 197, 94, 0.25);
+}
+
+.tradingToggleButtonBuy:hover {
+    background: linear-gradient(to right, rgb(34, 197, 94), rgb(22, 163, 74));
+}
+
+.tradingToggleButtonSell {
+    background: linear-gradient(to right, rgb(220, 38, 38), rgb(185, 28, 28));
+    box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.25);
+}
+
+.tradingToggleButtonSell:hover {
+    background: linear-gradient(to right, rgb(239, 68, 68), rgb(220, 38, 38));
+}
+
+.tradingStatus {
+    padding: 0.5rem 1rem;
+    border: 1px solid;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.tradingStatusActive {
+    border-color: rgba(74, 222, 128, 0.5);
+    background: rgba(6, 78, 59, 0.2);
+    color: rgb(74, 222, 128);
+}
+
+.tradingStatusInactive {
+    border-color: rgba(75, 85, 99, 0.5);
+    background: rgba(31, 41, 55, 0.2);
+    color: rgb(156, 163, 175);
+}
+
+/* Transaction and Holder Lists */
+.listContainer {
+    flex: 1;
+}
+
+.listScroll {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    overflow-x: auto;
+    max-height: 15rem;
+}
+
+.listItem {
+    padding: 0.5rem;
+    background: rgba(31, 41, 55, 0.3);
+    border: 1px solid rgba(55, 65, 81, 0.3);
+    border-radius: 0.5rem;
+    min-width: max-content;
+}
+
+.listItemContent {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+/* Transaction List Specific */
+.transactionWallet {
+    color: rgb(147, 197, 253);
+    width: 5rem;
+}
+
+.transactionType {
+    width: 4rem;
+}
+
+.transactionTypeBuy {
+    color: rgb(74, 222, 128);
+}
+
+.transactionTypeSell {
+    color: rgb(248, 113, 113);
+}
+
+.transactionSol,
+.transactionPrice {
+    width: 4rem;
+    text-align: right;
+}
+
+.transactionTime {
+    color: rgb(156, 163, 175);
+    width: 4rem;
+}
+
+.transactionTxId {
+    color: rgb(96, 165, 250);
+    cursor: pointer;
+    width: 6rem;
+}
+
+.transactionTxId:hover {
+    color: rgb(147, 197, 253);
+}
+
+/* Holder List Specific */
+.holderWallet {
+    color: rgb(147, 197, 253);
+    width: 5rem;
+}
+
+.holderCost,
+.holderAvgCost,
+.holderPotentialSell {
+    width: 4rem;
+    text-align: right;
+}
+
+.holderProfit {
+    width: 5rem;
+    text-align: right;
+}
+
+.profitPositive {
+    color: rgb(74, 222, 128);
+}
+
+.profitNegative {
+    color: rgb(248, 113, 113);
+}
+
+/* Drag and drop visual feedback */
+.walletItem.dragOver {
+    border-top: 2px solid rgb(96, 165, 250);
+    margin-top: 2px;
+}
+
+.walletItem:hover .walletDragHandle {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+    .walletContent {
+        font-size: 0.7rem;
+        gap: 0.75rem;
+    }
+
+    .headerItem {
+        font-size: 0.7rem;
+    }
+
+    .tradingAmounts {
+        flex-wrap: wrap;
+    }
+
+    .walletHeaders {
+        gap: 0.75rem;
+        padding: 0.375rem 0.5rem;
+    }
+
+    .actionGroup {
+        flex-wrap: wrap;
+        gap: 0.375rem;
+    }
+
+    .bundleOption {
+        margin-right: 0.25rem;
+    }
+
+    .buttonBuySelected,
+    .buttonSellSelected {
+        font-size: 0.8rem;
+        padding: 0.375rem 0.75rem;
+    }
+
+    .walletItem {
+        padding: 0.5rem;
+    }
+
+    .walletDragHandle {
+        font-size: 0.7rem;
+    }
+
+    .walletTypeSelect {
+        width: 4.5rem;
+        font-size: 0.6rem;
+    }
+
+    .amountInput {
+        width: 70px;
+    }
+
+    .legendItem {
+        font-size: 0.7rem;
+    }
+
+    .legendColor {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .mainGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .leftColumn,
+    .centerColumn,
+    .rightColumn {
+        grid-column: span 1;
+    }
+
+    .walletContent {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .tradingAmountsAndActions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .actionGroup {
+        flex-wrap: wrap;
+        gap: 0.375rem;
+        justify-content: center;
+    }
+
+    .bundleOption {
+        margin-right: 0.25rem;
+    }
+
+    .buttonBuySelected,
+    .buttonSellSelected {
+        font-size: 0.8rem;
+        padding: 0.375rem 0.75rem;
+    }
+
+    .modalContent {
+        width: 95%;
+        margin: 1rem;
+    }
+
+    .modalHeader,
+    .modalBody,
+    .modalFooter {
+        padding: 1rem;
+    }
+
+    .privateKeysTextarea {
+        min-height: 150px;
+    }
+
+    .walletHeaders {
+        display: none;
+    }
+
+    .walletItem {
+        border-left: none;
+        border-top: 4px solid;
+    }
+}
+
+/* Scrollbar Styles */
+.walletListContainer::-webkit-scrollbar,
+.listScroll::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.walletListContainer::-webkit-scrollbar-track,
+.listScroll::-webkit-scrollbar-track {
+    background: rgba(31, 41, 55, 0.3);
+    border-radius: 3px;
+}
+
+.walletListContainer::-webkit-scrollbar-thumb,
+.listScroll::-webkit-scrollbar-thumb {
+    background: rgba(75, 85, 99, 0.6);
+    border-radius: 3px;
+}
+
+.walletListContainer::-webkit-scrollbar-thumb:hover,
+.listScroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(96, 165, 250, 0.8);
+}

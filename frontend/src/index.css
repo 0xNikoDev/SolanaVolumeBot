@@ -1,0 +1,6 @@
+:root {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, rgb(17, 24, 39), rgb(31, 41, 55));
+    min-height: 100vh;
+}
