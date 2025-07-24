@@ -1,4 +1,4 @@
-# 🚀 Solana Volume Bot - Professional Trading Suite
+# 🚀 Solana Volume Bot
 
 <div align="center">
 
