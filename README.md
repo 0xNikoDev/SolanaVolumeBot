@@ -23,7 +23,7 @@
 ### 🎯 Key Highlights
 - ⚡ **High-Performance** Rust backend for lightning-fast execution
 - 🎨 **Modern UI** with React + Tailwind CSS
-- 🔗 **pump.fun Integration** for seamless token creation
+- 🔗 **pump.fun and bonk Integration** for seamless token creation
 - 🤖 **Automated Trading** with customizable parameters
 - 📊 **Real-time Analytics** and monitoring dashboard
 - 🔒 **Secure** private key management
@@ -67,7 +67,7 @@
 
 ### 🎯 Token Creation
 - **pump.fun Integration**: Create tokens directly through pump.fun platform
-- **Bonk Version**: Coming soon - enhanced token creation capabilities  
+- **Bonk Version**: enhanced token creation capabilities  
 - **Automated Setup**: Seamless token deployment and configuration
 - **Social Integration**: Twitter, Telegram, and website links
 - **Custom Metadata**: Name, symbol, description, and image configuration
