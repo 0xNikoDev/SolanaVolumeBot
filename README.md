@@ -10,7 +10,7 @@
 
 **Professional volume generation software for Solana tokens with pump.fun integration**
 
-[📱 Telegram: @niko_sol_dev](https://t.me/niko_sol_dev) • [🌐 Demo](#screenshots) • [💰 Purchase](#purchase)
+[📱 Telegram: @niko_sol_dev](https://t.me/niko_sol_dev) • [🌐 Demo](https://tokenlab.pw/) • [💰 Purchase]([#purchase](https://tokenlab.pw/alpha-details/))
 
 </div>
 
